@@ -10,7 +10,7 @@ pipeline {
         DOCKER_IMAGE = 'demo-app' //도커 이미지 이름
         CONTAINER_NAME = 'springboot-container' //도커 컨테이너 이름
         JAR_FILE_NAME = 'app.jar' //복사할 JAR 파일 이름
-        ROOT = "8081" //컨테이너와 연결할 포트
+        PORT = "8081" //컨테이너와 연결할 포트
         REMOTE_USER = 'ec2-user' //원격 서버 사용자 이름
         REMOTE_HOST = '3.34.134.227' //원격(springboot) 서버 Public IP 주소
         REMOTE_DIR = '/home/ec2-user/deploy' //원격 서버의 파일 복사할 경로
