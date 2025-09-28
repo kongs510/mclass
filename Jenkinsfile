@@ -5,7 +5,7 @@ pipeline {
 
     tools {
         //Maven 3.9.11 사용
-        maven 'Maven3.9.11'
+        maven 'Maven 3.9.11'
     }
     environment {
         //배포에 필요한 환경변수 설정
@@ -24,8 +24,6 @@ pipeline {
             steps {
                 //Jenkins가 연결된 Git 저장소에서 최신 코드 체크아웃
                 checkout scm
-                // //Git 저장소에서 코드 체크아웃
-                // git branch: 'main', url: 'https://github.com/kongs510/mclass.git'
             }
         }
         stage('Maven Build') {
