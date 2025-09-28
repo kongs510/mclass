@@ -19,7 +19,7 @@ pipeline {
         SSH_CREDENTIALS_ID = '5ebab6a5-eb7c-46ac-a96f-469bf0ad74da' //Jenkins에 등록된 SSH 자격증명 ID
     }
     stages {
-        stage('git checkout') {
+        stage('Git Checkout') {
             //stage 안에서 실행 실행할 실제 명령어
             steps {
                 //Jenkins가 연결된 Git 저장소에서 최신 코드 체크아웃
@@ -35,7 +35,7 @@ pipeline {
                 //sh 'mvn Hello' : 리눅스 명령어 실행
             }
         }
-        stage('progress') {
+        stage('Prepare Jar') {
             steps {
                 //빌드된 JAR 파일을 원격 서버로 복사
                 sh 'cp target/demo-0.0.1-SNAPSHOT.jar ${JAR_FILE_NAME}'
