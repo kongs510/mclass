@@ -5,7 +5,7 @@ pipeline {
 
     tools {
         //Maven 3.9.11 사용
-        maven 'Maven 3.9.11'
+        maven 'maven 3.9.11'
     }
     environment {
         //배포에 필요한 환경변수 설정
